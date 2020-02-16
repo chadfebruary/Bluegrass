@@ -48,6 +48,8 @@ C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\roslyn\vbc.rsp
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\roslyn\VBCSCompiler.exe
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\roslyn\VBCSCompiler.exe.config
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\Antlr3.Runtime.dll
+C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.dll
+C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.SqlServer.dll
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\Microsoft.Web.Infrastructure.dll
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\Newtonsoft.Json.dll
@@ -59,6 +61,8 @@ C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\System.Web.WebPages.Deployment.
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\System.Web.WebPages.dll
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\System.Web.WebPages.Razor.dll
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\WebGrease.dll
+C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.xml
+C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.SqlServer.xml
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\System.Web.Helpers.xml
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\System.Web.Mvc.xml
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\System.Web.Optimization.xml
@@ -73,7 +77,3 @@ C:\Bluegrass\PeopleDirectory\PeopleDirectory\obj\Debug\PeopleDirectory.csproj.Co
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\obj\Debug\PeopleDirectory.csproj.CopyComplete
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\obj\Debug\PeopleDirectory.dll
 C:\Bluegrass\PeopleDirectory\PeopleDirectory\obj\Debug\PeopleDirectory.pdb
-C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.dll
-C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.SqlServer.dll
-C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.xml
-C:\Bluegrass\PeopleDirectory\PeopleDirectory\bin\EntityFramework.SqlServer.xml

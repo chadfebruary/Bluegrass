@@ -19,9 +19,12 @@
                 @Html.ActionLink("People Directory", "", "", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                @*<ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Client", "Index", "Client")</li>
                     <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                </ul>*@
+                <ul class="nav navbar-nav">
+                    <li id="login">@Html.ActionLink("Login", "Login", "Admin")</li>
                 </ul>
             </div>
         </div>

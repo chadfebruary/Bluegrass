@@ -18,7 +18,7 @@ namespace PeopleDirectory.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            return View(db.Administrators.ToList());
+            return View(db.Clients.ToList());
         }
 
         // GET: Admin/Details/5
@@ -28,12 +28,49 @@ namespace PeopleDirectory.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Admin admin = db.Administrators.Find(id);
-            if (admin == null)
+            Client client = db.Clients.Find(id);
+            if (client == null)
             {
                 return HttpNotFound();
             }
-            return View(admin);
+            return View(client);
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login([Bind(Include = "Username,Password")] Admin admin)
+        {
+            if (ModelState.IsValid)
+            {
+                Admin account = db.Administrators.Find(admin.Username);
+
+                if (account == null)
+                {
+                    ModelState.AddModelError("", "Account not found");
+                    return RedirectToAction("Login", "Admin");
+                }
+
+                if (!account.Password.Equals(admin.Password))
+                {
+                    ModelState.AddModelError("", "Incorrect password.");
+                    return RedirectToAction("Login", "Admin");
+                }
+                return RedirectToAction("Index", "Home", new { loggedIn = true });
+            }
+            else
+            {
+                ModelState.AddModelError("", "Login failure");
+                return RedirectToAction("Login", "Admin");
+            }
+
+
+            admin.LoggedIn = true;
+            return RedirectToAction("Index", "Home", true);
         }
 
         // GET: Admin/Create

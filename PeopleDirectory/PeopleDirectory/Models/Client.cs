@@ -17,6 +17,6 @@ namespace PeopleDirectory.Models
         public string Mobile { get; set; }
         public char Gender { get; set; }
         public string Email { get; set; }
-
+        public bool LoggedIn { get; set; }
     }
 }

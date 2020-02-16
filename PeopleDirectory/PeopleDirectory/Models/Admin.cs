@@ -8,9 +8,11 @@ namespace PeopleDirectory.Models
 {
     public class Admin
     {
+        //[Key]
+        //public int UserId { get; set; }
         [Key]
-        public int UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public bool LoggedIn { get; set; }
     }
 }
