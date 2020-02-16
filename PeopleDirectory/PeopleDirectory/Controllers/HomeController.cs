@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using PeopleDirectory.DAL;
@@ -115,6 +116,30 @@ namespace PeopleDirectory.Controllers
             {
                 db.Entry(client).State = EntityState.Modified;
                 db.SaveChanges();
+
+                try
+                {
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                    mail.From = new MailAddress("chadfebruary@gmail.com");
+                    mail.To.Add("mark@bluegrassdigital.com");
+                    mail.Subject = "People Directory edit";
+                    mail.Body = "Hello Mark," +
+                        "There have been changes made to a record in the client table. The new details are:" +
+                        string.Format("First name-{0}, Last name-{1}, City-{2}, Country-{3}, Mobile-{4}, Email-{5}",client.FirstName,client.LastName,client.City,client.Country,client.Mobile,client.Email);
+
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("chadfebruary@gmail.com", "DarkSouls2");
+                    SmtpServer.EnableSsl = true;
+
+                    SmtpServer.Send(mail);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
+
                 return RedirectToAction("Index");
             }
             return View(client);
